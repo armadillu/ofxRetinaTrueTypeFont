@@ -1,22 +1,22 @@
 //
-//  ofRetinaTrueTypeFont.h
+//  ofxRetinaTrueTypeFont.h
 //  fontsExample
 //
 //  Created by Oriol Ferrer Mesià on 01/02/13.
 //
 //
 
-#ifndef fontsExample_ofRetinaTrueTypeFont_h
-#define fontsExample_ofRetinaTrueTypeFont_h
+#ifndef fontsExample_ofxRetinaTrueTypeFont_h
+#define fontsExample_ofxRetinaTrueTypeFont_h
 
 
 #include "ofTrueTypeFont.h"
 
-class ofRetinaTrueTypeFont: public ofTrueTypeFont{
+class ofxRetinaTrueTypeFont: public ofTrueTypeFont{
 
 public:
 
-	ofRetinaTrueTypeFont();
+	ofxRetinaTrueTypeFont();
 
 	void drawString(string s, float x, float y);
 	bool loadFont(string filename, int fontsize, bool _bAntiAliased=true, bool _bFullCharacterSet=false, bool makeContours=false, float simplifyAmt=0.3, int dpi=0);

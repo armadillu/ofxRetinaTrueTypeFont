@@ -1,4 +1,4 @@
-#ofRetinaTrueTypeFont
+#ofxRetinaTrueTypeFont
 
 
 Easy retina resolution for ofTrueTypeFont; makes the most sense when used together with ofxEasyRetina.

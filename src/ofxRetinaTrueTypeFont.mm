@@ -1,5 +1,5 @@
 //
-//  ofRetinaTrueTypeFont.cpp
+//  ofxRetinaTrueTypeFont.cpp
 //  fontsExample
 //
 //  Created by Oriol Ferrer Mesià on 01/02/13.
@@ -7,9 +7,9 @@
 //
 
 #include "ofMain.h"
-#include "ofRetinaTrueTypeFont.h"
+#include "ofxRetinaTrueTypeFont.h"
 
-ofRetinaTrueTypeFont::ofRetinaTrueTypeFont():ofTrueTypeFont(){
+ofxRetinaTrueTypeFont::ofxRetinaTrueTypeFont():ofTrueTypeFont(){
 
 	retina = false;
 	scale = 1.0f;
@@ -21,12 +21,12 @@ ofRetinaTrueTypeFont::ofRetinaTrueTypeFont():ofTrueTypeFont(){
 	}
 }
 
-void ofRetinaTrueTypeFont::forceScale(float s){
+void ofxRetinaTrueTypeFont::forceScale(float s){
 	scale = 1 / s;
 	retina = true;
 };
 
-bool ofRetinaTrueTypeFont::loadFont(string filename, int fontsize, bool _bAntiAliased, bool _bFullCharacterSet, bool makeContours, float simplifyAmt, int dpi){
+bool ofxRetinaTrueTypeFont::loadFont(string filename, int fontsize, bool _bAntiAliased, bool _bFullCharacterSet, bool makeContours, float simplifyAmt, int dpi){
 	ofTrueTypeFont::loadFont(filename, fontsize / scale, _bAntiAliased, _bFullCharacterSet, makeContours, simplifyAmt, dpi);
 	//ofTrueTypeFont::setLineHeight( ofTrueTypeFont::getLineHeight() / scale );
 	//ofTrueTypeFont::setSpaceSize( ofTrueTypeFont::getSpaceSize() / scale);
@@ -34,37 +34,37 @@ bool ofRetinaTrueTypeFont::loadFont(string filename, int fontsize, bool _bAntiAl
 }
 
 
-//void ofRetinaTrueTypeFont::setLetterSpacing(float spacing){
+//void ofxRetinaTrueTypeFont::setLetterSpacing(float spacing){
 //	ofTrueTypeFont::setLineHeight( spacing / scale);
 //}
 //
 //
-//void ofRetinaTrueTypeFont::setSpaceSize(float size){
+//void ofxRetinaTrueTypeFont::setSpaceSize(float size){
 //	ofTrueTypeFont::setSpaceSize( size / scale);
 //}
 //
 //
-void ofRetinaTrueTypeFont::setLineHeight(float height){
+void ofxRetinaTrueTypeFont::setLineHeight(float height){
 	ofTrueTypeFont::setLineHeight( height / scale);
 }
 //
 //
-//float ofRetinaTrueTypeFont::getSpaceSize(){
+//float ofxRetinaTrueTypeFont::getSpaceSize(){
 //	return  ofTrueTypeFont::getSpaceSize() * scale;
 //}
 //
 //
-//float ofRetinaTrueTypeFont::getLineHeight(){
+//float ofxRetinaTrueTypeFont::getLineHeight(){
 //	return  ofTrueTypeFont::getLineHeight() * scale;
 //}
 //
 //
-//float ofRetinaTrueTypeFont::getLetterSpacing(){
+//float ofxRetinaTrueTypeFont::getLetterSpacing(){
 //	return  ofTrueTypeFont::getLetterSpacing() * scale;
 //}
 
 
-ofRectangle ofRetinaTrueTypeFont::getStringBoundingBox(string s, float x, float y){
+ofRectangle ofxRetinaTrueTypeFont::getStringBoundingBox(string s, float x, float y){
 	ofRectangle r =  ofTrueTypeFont::getStringBoundingBox(s, x, y);
 	r.width *= scale;
 	r.height *= scale;
@@ -72,7 +72,7 @@ ofRectangle ofRetinaTrueTypeFont::getStringBoundingBox(string s, float x, float 
 }
 
 
-void ofRetinaTrueTypeFont::drawString(string s, float x, float y){
+void ofxRetinaTrueTypeFont::drawString(string s, float x, float y){
 
 	if (retina){
 		ofPushMatrix();

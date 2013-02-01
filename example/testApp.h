@@ -3,7 +3,7 @@
 #include "ofMain.h"
 #include "ofxiPhone.h"
 #include "ofxiPhoneExtras.h"
-#include "ofRetinaTrueTypeFont.h"
+#include "ofxRetinaTrueTypeFont.h"
 
 //include both these files!
 #include "ofxEasyRetina.h"
@@ -17,7 +17,7 @@ class testApp : public ofxiPhoneApp{
         void draw();
 
         ofTrueTypeFont font;
-		ofRetinaTrueTypeFont retinaFont;
+		ofxRetinaTrueTypeFont retinaFont;
 
 		//declare an ofxEasyRetina instance
 		ofxEasyRetina retina;
