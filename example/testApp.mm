@@ -47,11 +47,11 @@ void testApp::draw(){
 		font.drawString("rotating z\nand new line", 0, 0);
 		ofPopMatrix();
 
-		ofRectangle r = font.getStringBoundingBox("bbox", off, 200);
+		ofRectangle r = font.getStringBoundingBox("bbox\ntwo lines", off, 200);
 		ofSetColor(66);
 		ofRect(r);
 		ofSetColor(255);
-		font.drawString("bbox", off, 200);
+		font.drawString("bbox\ntwo lines", off, 200);
 
 	ofPopMatrix();
 
@@ -74,11 +74,11 @@ void testApp::draw(){
 		retinaFont.drawString("rotating z\nand new line", 0, 0);
 		ofPopMatrix();
 
-		ofRectangle r2 = font.getStringBoundingBox("bbox", off, 200);
+		ofRectangle r2 = font.getStringBoundingBox("bbox\ntwo lines", off, 200);
 		ofSetColor(66);
 		ofRect(r2);
 		ofSetColor(255);
-		retinaFont.drawString("bbox", off, 200);
+		retinaFont.drawString("bbox\ntwo lines", off, 200);
 
 	ofPopMatrix();
 

@@ -7,7 +7,8 @@ Easy retina resolution for ofTrueTypeFont; makes the most sense when used togeth
 
 ###To Do
 
+
 - shape support
-- test!
+- proper tests! bbox dosnt seem very precise...
 
 
