@@ -10,5 +10,4 @@ Easy retina resolution for ofTrueTypeFont; makes the most sense when used togeth
 
 - shape support
 - proper tests! bbox dosnt seem very precise...
-
-
+- fix offsets with proper bbox calcs
