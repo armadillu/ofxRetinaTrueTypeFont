@@ -22,6 +22,9 @@ public:
 	bool loadFont(string filename, int fontsize, bool _bAntiAliased=true, bool _bFullCharacterSet=false, bool makeContours=false, float simplifyAmt=0.3, int dpi=0);
 	void forceScale(float s);
 
+	float getScale(){ return scale; }
+	bool isRetina(){ return  retina; }
+
 //	float getLetterSpacing();
 //	void setLetterSpacing(float spacing);
 //	float getLineHeight();
